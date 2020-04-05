@@ -1,0 +1,85 @@
+slots:
+  name:
+    type: text
+  mobile:
+    type: text
+  email:
+    type: text
+
+entities:
+  - name
+  - mobile
+  - email
+
+intents:
+  - start
+  - sms
+  - ivr
+  - prepaid
+  - postpaid
+  - custom_plan
+  - inform
+  - goodbye
+
+
+responses:
+  utter_greet:
+  - text: "Please Choose the Service"
+    buttons:
+    - title: "SMS"
+      payload: "sms"
+    - title: "IVR"
+      payload: "ivr"
+
+  utter_prepaid_postpaid:
+  - text: "Please select the sms plans"
+    buttons:
+    - title: "PREPAID"
+      payload: "prepaid"
+    - title: "POSTPAID"
+      payload: "postpaid"
+
+  utter_prepaid:
+  - text: "please select sms prepaid plans"
+    buttons:
+    - title: "PLAN 1"
+      payload: "plan1"
+    - title: "PLAN 2"
+      payload: "plan2"
+    - title: "CUSTOM PLAN"
+      payload: "custom plan"
+
+  utter_postpaid:
+  - text: "please select sms postpaid plans"
+    buttons:
+    - title: "PLAN 1"
+      payload: "plan1"
+    - title: "PLAN 2"
+      payload: "plan2"
+    - title: "CUSTOM PLAN"
+      payload: "custom plan"
+
+  utter_custom_plan:
+    - text: "Please provide your contact information and one of our sales executive will connect you shortly."
+  utter_ask_name:
+    - text: "Your Name"
+  utter_ask_mobile:
+    - text: "Your Mobile Number"
+  utter_ask_valid_mobile:
+    - text: "Please Enter a valid Mobile Number"
+  utter_ask_email:
+    - text: "Your Email"
+  utter_ack:
+    - text: "Hi {name}, Confirming your Mobile number {mobile} and Email {email}. Our sales Executive will contact you shortly."
+
+  utter_bye_for_custom_plan:
+  - text: "Thanks for your  intrest in our product, one of our sales executive will contact shortly."
+  utter_for_prepaid_plan:
+  - text: "Thanks for your intrest in our product"
+
+actions:
+  - action_mobile_validation
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
