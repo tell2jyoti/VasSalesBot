@@ -4,17 +4,17 @@
 * sms
   - utter_prepaid_postpaid
 * prepaid
- - utter_prepaid
+  - utter_prepaid
 * custom_plan
- - utter_custom_plan
- - utter_ask_name
+  - utter_custom_plan
+  - utter_ask_name
 * inform{"name": "Jyoti"}
- - utter_ask_mobile
+  - utter_ask_mobile
 * inform{"mobile": "9876543210"}
- - action_mobile_validation
+  - action_mobile_validation
 * inform{"email": "test@example.com"}
- - utter_ack
- - action_restart
+  - utter_ack
+  - action_restart
 
 ## happy path sms postpaid
 * start
@@ -36,21 +36,21 @@
 
 ## happy path ivr prepaid
 * start
- - utter_greet
+  - utter_greet
 * ivr
- - utter_prepaid_postpaid
+  - utter_prepaid_postpaid
 * prepaid
- - utter_prepaid
+  - utter_prepaid
 * custom_plan
- - utter_custom_plan
- - utter_ask_name
+  - utter_custom_plan
+  - utter_ask_name
 * inform{"name": "Jyoti"}
- - utter_ask_mobile
+  - utter_ask_mobile
 * inform{"mobile": "9876543210"}
- - action_mobile_validation
+  - action_mobile_validation
 * inform{"email": "test@example.com"}
- - utter_ack
- - action_restart
+  - utter_ack
+  - action_restart
 
 ## happy path Ivr postpaid
 * start
